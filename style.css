@@ -1,0 +1,337 @@
+/* General Styles */
+body {
+    background-color: #1e1e1e;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+.header {
+    background-color: #292929;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.nav-links li a.active,
+.nav-links li a:hover {
+    background-color: #333;
+}
+
+/* Hamburger Menu for Mobile */
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none; /* Initially hide the nav links */
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+        background-color: #292929;
+        width: 100%;
+    }
+
+    .nav-links.show {
+        display: flex; /* Show menu when 'show' class is added */
+    }
+
+    .nav-links li {
+        text-align: center;
+    }
+
+    .nav-links li a {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+/* Hero Section Styles */
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+}
+
+.intro h1,
+.intro h2 {
+    margin: 10px 0;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.social-links a:hover {
+    color: #00bcd4;
+    transform: scale(1.1);
+    transition: transform 0.2s;
+}
+
+/* Hire Me Button */
+.hire-me {
+    background-color: #00bcd4;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    margin: 10px 0;
+    box-shadow: 0 0 50px rgb(154, 206, 230);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.hire-me.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hire-me:hover {
+    background-color: #31717e;
+    box-shadow: 0 0 70px rgb(0, 188, 212);
+}
+
+/* Profile Image Styles */
+.profile-image {
+    width: 320px;
+    height: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #121212;
+    position: relative;
+    border: 5px solid transparent;
+    box-shadow: 0 0 80px rgba(90, 92, 92, 0.7);
+    border-radius: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.profile-image img {
+    border-radius: 50%;
+    max-width: 200px;
+    max-height: 200px;
+    box-shadow: 0 0 30px rgba(0, 255, 242, 0.7);
+}
+
+.profile-image.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Footer Styles */
+.site-footer {
+    background-color: #292929;
+    text-align: center;
+    padding: 10px;
+    color: #ccc;
+    font-size: 0.9rem;
+}
+
+.site-footer p {
+    margin: 5px 0;
+}
+
+/* Mobile-Specific Styles */
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile-image {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hire-me {
+        width: 100%;
+    }
+}
+
+/* Small Screens (Less than 576px) */
+@media (max-width: 576px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .social-links a {
+        font-size: 1rem;
+    }
+
+    .hire-me {
+        font-size: 1rem;
+    }
+}
+/* Enhanced About Section with Box */
+.about-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 30px;
+    background: linear-gradient(135deg, #1a1a1a, #333);
+    border-radius: 15px;
+    border: 2px solid #00bcd4; /* Box border */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+    margin: 40px auto;
+    max-width: 900px; /* Centering and limiting width */
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+
+
+/* Additional adjustments for mobile */
+@media (max-width: 768px) {
+    .about-section {
+        padding: 40px 20px;
+        max-width: 100%; /* Full width on smaller screens */
+    }
+}
+
+
+.about-content {
+    max-width: 750px;
+    text-align: left;
+    color: #e0e0e0;
+    padding: 20px;
+}
+
+.about-content h1 {
+    font-size: 2.5rem;
+    color: #00bcd4;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #00bcd4;
+    padding-bottom: 5px;
+}
+
+.about-content p {
+    font-size: 1.3rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    text-indent: 20px;
+    transition: color 0.3s;
+}
+
+.about-content p:hover {
+    color: #f5f5f5;
+}
+
+/* Highlighted text effect */
+.about-content p strong {
+    background: linear-gradient(90deg, #00bcd4, #1e90ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+/* Subtle Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    .about-section {
+        padding: 40px 15px;
+    }
+
+    .about-content h1 {
+        font-size: 2rem;
+    }
+
+    .about-content p {
+        font-size: 1.1rem;
+        text-indent: 15px;
+    }
+}
+.contact-me {
+    background-color: #00bcd4;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    margin: 20px 0;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-me:hover {
+    background-color: #0198a2;
+    transform: scale(1.05);
+}
+
+.contact-me:active {
+    background-color: #017882;
+    transform: scale(0.98);
+}
+

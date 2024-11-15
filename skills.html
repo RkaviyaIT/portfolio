@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Kaviya, a college student specializing in building exceptional digital experiences.">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        .skills-section {
+            padding: 50px 20px;
+            background-color: #000000; /* Black background */
+        }
+    
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #f7fdff; /* Light blue text */
+        }
+    
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+    
+        .skill-category {
+            background-color: #1a1a1a; /* Darker black for contrast */
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+    
+        .skill-category h3 {
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+            color: #00bfff; /* Light blue */
+        }
+    
+        .skills-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+    
+        .skill-item {
+            margin-bottom: 15px;
+        }
+    
+        .skill-name {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+            display: block;
+            color: #00bfff; /* Light blue */
+        }
+    
+        .skill-bar {
+            background-color: #333333; /* Dark gray for the bar */
+            border-radius: 5px;
+            overflow: hidden;
+            height: 10px;
+        }
+    
+        .skill-level {
+            height: 100%;
+            background-color: #00bfff; /* Light blue */
+        }
+        .profile-links {
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .profile-icons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .profile-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    </style>    
+    
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">Portfolio</div>
+            <div class="hamburger" onclick="toggleMenu()">☰</div> <!-- Hamburger Icon -->
+            <ul class="nav-links" id="nav-menu"> <!-- Navigation links -->
+                <li><a href="index1.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="skills.html"  class="active">Skills</a></li>
+                <li><a href="myportfolio.html">Portfolio</a></li>
+                <li><a href="contactme.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="skills" class="skills-section">
+        <h2 class="section-title">My Skills</h2>
+        <div class="skills-container">
+            <!-- Skill Category: Programming Languages -->
+            <div class="skill-category">
+                <h3>Programming Languages</h3>
+                <ul class="skills-list">
+                    <li>
+                        <div class="skill-item">
+                            <span class="skill-name">Java</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="skill-item">
+                            <span class="skill-name">C++</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 80%;"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="skill-item">
+                            <span class="skill-name">Python</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 70%;"></div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+    
+            <!-- Skill Category: Web Development -->
+            <div class="skill-category">
+                <h3>Web Development</h3>
+                <ul class="skills-list">
+                    <li>
+                        <div class="skill-item">
+                            <span class="skill-name">HTML/CSS</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 90%;"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="skill-item">
+                            <span class="skill-name">JavaScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 75%;"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="skill-item">
+                            <span class="skill-name">Node.js</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 65%;"></div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+    
+            <!-- Skill Category: Tools and Technologies -->
+            <div class="skill-category">
+                <h3>Tools and Technologies</h3>
+                <ul class="skills-list">
+                    <li>
+                        <div class="skill-item">
+                            <span class="skill-name">Git/GitHub</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 80%;"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="skill-item">
+                            <span class="skill-name">SQL</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 75%;"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="skill-item">
+                            <span class="skill-name">Figma</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 60%;"></div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+        <div class="profile-links">
+            <h3>My Profiles</h3>
+            <div class="profile-icons">
+                <a href="https://leetcode.com/u/RkaviyaIT/" target="_blank">
+                    <img src="leetcode-logo.png" alt="LeetCode" class="profile-icon">
+                </a>
+                <a href="https://www.codechef.com/users/kaviya_1" target="_blank">
+                    <img src="codechef-logo.png" alt="CodeChef" class="profile-icon">
+                </a>
+                <a href="https://www.geeksforgeeks.org/user/kaviyarxz0a/" target="_blank">
+                    <img src="gfg-logo.png" alt="GeeksforGeeks" class="profile-icon">
+                </a>
+                <a href="https://codeforces.com/profile/RkaviyaIT" target="_blank">
+                    <img src="codeforces-logo.png" alt="Codeforces" class="profile-icon">
+                </a>
+            </div>
+        </div>
+    </section>
+    <script src="script1.js"></script>
+    <footer class="site-footer">
+        <p>&copy; 2024 My Portfolio</p>
+    </footer>
+</body>
+</html>
+    
